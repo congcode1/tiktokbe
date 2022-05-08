@@ -5,7 +5,7 @@ class VideoController {
     }
     create(req, res, next) {
         console.log(req.body)
-        res.send('create video api')
+        res.send("create video api")
     }
 }
 
