@@ -5,6 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
+    "create-hook": "husky add .husky/pre-commit \"npm format\"",
+    "format": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "scss": "node-sass --w src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,10 +29,5 @@
   },
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
