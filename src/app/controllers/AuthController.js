@@ -28,7 +28,7 @@ class AuthController {
             const refreshToken = await jwtHelper.generateToken(
                 instance,
                 refreshTokenSecret,
-                refreshTokenLife,
+                null,
             );
             return res.json(
                 apiResponse(1, { accessToken, refreshToken }, 'login ok'),
